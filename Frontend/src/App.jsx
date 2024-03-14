@@ -4,7 +4,7 @@ import {
   SignupPage,
   InvoicePage,
   InvoicePicPage,
-} from "./routes/Routes.js";
+} from "./routes/routes.js";
 import { useEffect } from "react";
 import Store from "./redux/store.js";
 import { ToastContainer } from "react-toastify";
