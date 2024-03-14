@@ -8,7 +8,7 @@ const app = express();
 
 app.use(cors(  
   {
-    origin:["https://levitation-invoice-generator.vercel.app/"],
+    origin:["https://levitation-invoice-generator.vercel.app"],
     credentials: true
   }
 )); 
