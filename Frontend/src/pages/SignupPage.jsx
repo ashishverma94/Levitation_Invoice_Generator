@@ -26,7 +26,6 @@ const SignupPage = () => {
     axios
       .post(`${server}/user/create-user`, { name, email, password })
       .then((res) => {
-        console.log(res);
         toast.success("Registered Successfully !");
         navigate("/login");
         setName("");

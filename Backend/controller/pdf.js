@@ -12,7 +12,8 @@ router.get(
     try {
       const browser = await puppeteer.launch({ headless: true });
       const page = await browser.newPage();
-      await page.goto(`${process.env.FRONTEND_URL}/pic`);
+      // await page.goto(`${process.env.FRONTEND_URL}/pic`);
+      await page.goto(`https://levitation-invoice-generator.vercel.app/pic`);
 
       const pdfBuffer = await page.pdf({
         format: "A4",
