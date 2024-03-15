@@ -12,24 +12,22 @@ const router = express.Router();
 router.post("/create-user", async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
-    console.log(email) ;
+    console.log(email);
     const userEmail = await User.findOne({ email });
 
     if (userEmail) {
       res.status(400).json("User already exists");
     }
- 
+
     const user = await User.create({
       name: name,
       email: email,
       password: password,
     });
 
-    const activationToken = createActivationToken({name,email});
+    const activationToken = createActivationToken({ name, email });
     user.token = activationToken;
- 
     sendToken(user, 201, res);
-
   } catch (error) {
     return next(new ErrorHandler(error.message, 400));
   }
@@ -74,6 +72,7 @@ router.get(
   "/getuser",
   isAuthenticated,
   catchAsyncErrors(async (req, res, next) => {
+    console.log("load user user ") ;
     try {
       const user = await User.findById(req.user.id);
 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { server } from "../server.js";
+import { server, server_dev } from "../server.js";
 import { toast } from "react-toastify";
 import { useEffect,useState } from "react";
 import { useSelector } from "react-redux";
@@ -37,6 +37,7 @@ const LoginPage = () => {
         window.location.reload(true);
       })
       .catch((error) => {
+        console.log(error) ;
         toast.error(error.response.data.message);
       });
   };

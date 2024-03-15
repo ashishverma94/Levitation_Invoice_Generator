@@ -1,7 +1,9 @@
 import axios from "axios";
-import { server } from "../../server";
+import { server, server_dev } from "../../server";
 
 // load user
+
+
 export const loadUser = () => async (dispatch) => {
   try {
     dispatch({
