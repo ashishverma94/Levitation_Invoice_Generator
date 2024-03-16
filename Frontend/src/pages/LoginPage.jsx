@@ -4,8 +4,10 @@ import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { AiOutlineEye } from "react-icons/ai";
-import { AiOutlineEyeInvisible } from "react-icons/ai";
+// import { AiOutlineEye } from "react-icons/ai";
+// import { AiOutlineEyeInvisible } from "react-icons/ai";
+import FaFacebookSquare from 'react-icons/lib/fa/facebook-square';
+import FaLinkedin from 'react-icons/lib/fa/linkedin';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -91,13 +93,13 @@ const LoginPage = () => {
                     className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                    />
                  {visible ? (
-                    <AiOutlineEye
+                    <FaFacebookSquare
                       className="absolute right-2 top-2 cursor-pointer"
                       size={25}
                       onClick={() => setVisible(false)}
                     />
                   ) : (
-                    <AiOutlineEyeInvisible
+                    <FaLinkedin
                       className="absolute right-2 top-2 cursor-pointer"
                       size={25}
                       onClick={() => setVisible(true)}
