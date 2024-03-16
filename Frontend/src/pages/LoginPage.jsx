@@ -4,8 +4,6 @@ import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-// import { AiOutlineEye } from "react-icons/ai";
-// import { AiOutlineEyeInvisible } from "react-icons/ai";
 import FaFacebookSquare from 'react-icons/lib/fa/facebook-square';
 import FaLinkedin from 'react-icons/lib/fa/linkedin';
 
